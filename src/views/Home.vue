@@ -1,19 +1,32 @@
 <template>
-  <NavBar/>
-  <router-view/>
+  <section class="mainScreen">
+    <div class="s1">
+      <h1>Comienza la aventura</h1>
+    </div>
+    <div class="s2">
+      <h2>Nombra a tu tortuga</h2>
+      <input type="text">
+    </div>
+    <div class="s3">
+      <img src="https://cdn.pixabay.com/photo/2017/01/31/17/09/egg-2025633_960_720.png">
+    </div>
+    <div class="s4">
+      <router-link class="nextButton" to="/problem">Siguiente</router-link>
+    </div>
+  </section>
 
   <!--<Problems/>-->
 
 </template>
 
 <script>
-import NavBar from "./components/NavBar.vue";
+//import NavBar from "./components/NavBar.vue";
 //import Problems from "./components/Problems.vue"
 
 export default {
-  name: "App",
+  name: "Home",
   components: {
-    NavBar
+    //NavBar
     //Problems
   },
 };
@@ -49,6 +62,7 @@ h1{
   color: white;
   font-size: 25px;
   margin-bottom: 0px;
+  
 }
 input{
   width: 300px;
