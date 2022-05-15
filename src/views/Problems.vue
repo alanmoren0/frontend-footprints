@@ -51,6 +51,7 @@ export default {
 }
 .s1{
     background-color: black;
+    background: radial-gradient(#282727,#000000);
     color: white;
     border-radius: 5px;
     text-align: left;
@@ -74,6 +75,7 @@ export default {
 }
 .s2{
     background-color: black;
+    background: radial-gradient(#706D6D,#000000);
     color: white;
     border-radius: 5px;
     text-align: left;
@@ -85,6 +87,7 @@ export default {
 }.s3{
     background-color: black;
     color: white;
+    background: radial-gradient(#282727,#000000);
     border-radius: 5px;
     text-align: left;
     height: 90%;
