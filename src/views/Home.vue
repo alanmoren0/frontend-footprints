@@ -5,13 +5,13 @@
     </div>
     <div class="s2">
       <h2>Nombra a tu tortuga</h2>
-      <input type="text">
+      <input type="text" v-model="turtleName">
     </div>
     <div class="s3">
       <img src="https://cdn.pixabay.com/photo/2017/01/31/17/09/egg-2025633_960_720.png">
     </div>
     <div class="s4">
-      <router-link class="nextButton" to="/problem">Siguiente</router-link>
+      <router-link class="nextButton" to="/problem" @click="$store.dispatch('startApp', turtleName)">Siguiente</router-link>
     </div>
   </section>
 
@@ -25,6 +25,11 @@
 
 export default {
   name: "Home",
+  data(){
+      return{
+          turtleName:''
+      }
+  },
   components: {
     //NavBar
     //Problems
