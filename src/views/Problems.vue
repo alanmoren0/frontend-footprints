@@ -1,27 +1,27 @@
 <template>
-    <h1>Nombre de la tortuga</h1>
+    <h1>{{ $store.state.turtleName }}</h1>
     <section class="problems">
         <div class="s1">
             <div class="description">
                 <h3>Estado:</h3>
-                <p>{{ $store.state.problems[2].estado }}</p>
+                <p>{{ $store.getters.getProblem.estado }}</p>
             </div>
             <div class="description">
                 <h3>Etapa:</h3>
-                <p>{{ $store.state.problems[2].etapa }}</p>
+                <p>{{ $store.getters.getProblem.etapa }}</p>
             </div>
             <div class="description2">
                 <h3>Descripción:</h3>
-                <p>{{ $store.state.problems[2].descripcion }}</p>
+                <p>{{ $store.getters.getProblem.descripcion }}</p>
             </div>
             <div class="description2">
                 <h3>Razón:</h3>
-                <p>{{ $store.state.problems[2].razon }}</p>
+                <p>{{ $store.getters.getProblem.razon }}</p>
             </div>
         </div>
-        <div class="s2"><img :src='$store.state.problems[2].urlImage' alt=""></div>
+        <div class="s2"><img :src='$store.getters.getProblem.urlImage' alt=""></div>
         <div class="s3">
-            <button>Siguiente</button>
+            <router-link class="nextButton" to="/">Regresar</router-link>
         </div>
     </section>
 </template>
@@ -106,7 +106,7 @@ h1{
     width: 100%;
     text-align: center;
 }
-button{
+.nextButton{
   width: 80px !important;
   height: 80px !important;
   border-radius: 100%;
@@ -117,11 +117,10 @@ button{
   cursor:pointer;
   margin-bottom: 10px;
   text-decoration: none;
+  text-align: center !important;
 }
-button:hover{
-  width: 81px;
-  height: 81px;
-  border-color: white;
-  border: 1px solid;
+.nextButton:hover{
+  width: 81px !important;
+  height: 81px !important;
 }
 </style>
