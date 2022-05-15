@@ -3,6 +3,7 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
 	  turtleName: '',
+    numProblem: 0,
     problems:[
       {estado: 'Viva', etapa: 'Adulta', razon: 'Temperaturas más altas podrían provocar que la arena se caliente, lo cual llevaría a un aumento de la proporción de crías hembra. ', descripcion: 'Llegamos a la adultos, pero no tenemos con quién echar acción.', urlImage: 'https://blogcostasalvaje.files.wordpress.com/2017/05/mg_3577tortuga-de-carey-1.jpg'},
       {estado: 'Muerta', etapa: 'Huevo', razon: 'Incluso una pequeña subida ya provocaría una gran pérdida del hábitat de playas de desove ', descripcion: 'Mamá tortuga no encontro un buen lugar para poner su nido.', urlImage: 'https://imagenes.elpais.com/resizer/rpLGWEp6DlTKoKbmyze803_UJpA=/414x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/3YFCXM6ZOSC36HURJSXQB53LGM.jpg'},
@@ -20,20 +21,22 @@ export default createStore({
   },
   getters: {
     getTurtleName(state){
-      return this.turtleName;
+      return state.turtleName;
     },
-    getProblem(state, id){
-      return this.problems[id];
+    getProblem(state){
+      let num = state.numProblem;
+      return state.problems[num];
     }
   },
   mutations: {
-    setTurtleName(state, name){
+    startApp(state, name){
+      state.numProblem = Math.round(Math.random()*state.problems.length);
       state.turtleName = name;
     }
   },
   actions: {
-    setTurtleName(state, name){
-      state.commit("setTurtleName", name);
+    startApp(state, name){
+      state.commit("startApp", name);
     }
   },
   modules: {
