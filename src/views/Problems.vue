@@ -4,22 +4,22 @@
         <div class="s1">
             <div class="description">
                 <h3>Estado:</h3>
-                <p>zacatecas xd</p>
+                <p>{{ $store.state.problems[0].estado }}</p>
             </div>
             <div class="description">
                 <h3>Etapa:</h3>
-                <p></p>
+                <p>{{ $store.state.problems[0].etapa }}</p>
             </div>
             <div class="description2">
                 <h3>Descripción:</h3>
-                <p>muy chida la descripcion</p>
+                <p>{{ $store.state.problems[0].descripcion }}</p>
             </div>
             <div class="description2">
                 <h3>Razón:</h3>
-                <p></p>
+                <p>{{ $store.state.problems[0].razon }}</p>
             </div>
         </div>
-        <div class="s2"><img src="./../assets/tortuga.jpg" alt=""></div>
+        <div class="s2"><img :src='$store.state.problems[0].urlImage' alt=""></div>
         <div class="s3">
             <button>Siguiente</button>
         </div>
