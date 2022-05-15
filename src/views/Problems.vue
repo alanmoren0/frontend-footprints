@@ -1,25 +1,25 @@
 <template>
-    <h1>Nombre de la tortuga</h1>
+    <h1>{{ $store.state.turtleName }}</h1>
     <section class="problems">
         <div class="s1">
             <div class="description">
                 <h3>Estado:</h3>
-                <p>{{ $store.state.problems[1].estado }}</p>
+                <p>{{ $store.getters.getProblem.estado }}</p>
             </div>
             <div class="description">
                 <h3>Etapa:</h3>
-                <p>{{ $store.state.problems[1].etapa }}</p>
+                <p>{{ $store.getters.getProblem.etapa }}</p>
             </div>
             <div class="description2">
                 <h3>Descripción:</h3>
-                <p>{{ $store.state.problems[1].descripcion }}</p>
+                <p>{{ $store.getters.getProblem.descripcion }}</p>
             </div>
             <div class="description2">
                 <h3>Razón:</h3>
-                <p>{{ $store.state.problems[1].razon }}</p>
+                <p>{{ $store.getters.getProblem.razon }}</p>
             </div>
         </div>
-        <div class="s2"><img :src='$store.state.problems[1].urlImage' alt=""></div>
+        <div class="s2"><img :src='$store.getters.getProblem.urlImage' alt=""></div>
         <div class="s3">
             <button>Siguiente</button>
         </div>
