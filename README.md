@@ -1,6 +1,6 @@
 # footprints
 
-##Proyecto paa hackaton hack the ocean de LaunchX
+## Proyecto para hackaton hack the ocean de LaunchX
 
 ## Project setup
 ```
